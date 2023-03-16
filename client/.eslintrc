@@ -1,0 +1,23 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard-with-typescript",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": "tsconfig.json"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/react-in-jsx-scope": "off"
+  }
+}
