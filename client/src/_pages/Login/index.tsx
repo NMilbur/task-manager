@@ -15,7 +15,7 @@ import {
   Typography,
 } from "@mui/material";
 import FlexBox from "_components/_atoms/FlexBox";
-import Page from "_components/_organisms/Page";
+import Page from "_components/_templates/Page";
 import { COLORS } from "_constants/styles";
 import { useState } from "react";
 

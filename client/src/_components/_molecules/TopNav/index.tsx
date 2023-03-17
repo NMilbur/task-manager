@@ -5,7 +5,10 @@ import { formatDate } from "_utilities/dates";
 
 const TopNav = () => {
   return (
-    <AppBar style={{ alignItems: "center" }}>
+    <AppBar
+      position="fixed"
+      sx={{ alignItems: "center", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    >
       <Toolbar>
         <FlexBox
           justifyContent="space-between"

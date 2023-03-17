@@ -1,5 +1,6 @@
 import { Breakpoint, Container, Toolbar } from "@mui/material";
 import FlexBox from "_components/_atoms/FlexBox";
+import SideNav from "_components/_organisms/SideNav";
 import TopNav from "_components/_molecules/TopNav";
 import { ReactNode } from "react";
 
@@ -19,7 +20,12 @@ const Page = ({
 }: PageProps) => {
   return (
     <Container maxWidth={fullWidth ? false : maxWidth} {...props}>
-      {showNav && <TopNav />}
+      {showNav && (
+        <>
+          <TopNav />
+          <SideNav />
+        </>
+      )}
       <Toolbar />
       <FlexBox m={4}>{children}</FlexBox>
     </Container>
