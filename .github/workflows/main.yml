@@ -9,9 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Install packages
-        run: npm ci
+        uses: Borales/actions-yarn@v4.2.0
+        with:
+          cmd: install
+
       - name: Prettier
-        run: npm run format
+        uses: Borales/actions-yarn@v4.2.0
+        with:
+          cmd: format
+
       - name: Lint
-        run: npm run lint
+        uses: Borales/actions-yarn@v4.2.0
+        with:
+          cmd: lint
