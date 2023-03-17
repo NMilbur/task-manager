@@ -3,28 +3,29 @@ on:
   pull_request:
     branches:
       - main
+
 jobs:
   test:
     name: Lint and check standards
     runs-on: ubuntu-latest
-    defaults:
-      cmd:
-        working-directory: ./client
 
     steps:
       - uses: actions/checkout@v3
 
       - name: Install packages
+        working-directory: ./client
         uses: Borales/actions-yarn@v4.2.0
         with:
           cmd: install
 
       - name: Prettier
+        working-directory: ./client
         uses: Borales/actions-yarn@v4.2.0
         with:
           cmd: format
 
       - name: Lint
+        working-directory: ./client
         uses: Borales/actions-yarn@v4.2.0
         with:
           cmd: lint
