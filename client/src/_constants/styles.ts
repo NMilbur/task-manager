@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material";
 
 export const COLORS = {
-  primary: "#6bbc49",
+  primary: "#89d16b",
 };
 
 export const THEME = createTheme({
