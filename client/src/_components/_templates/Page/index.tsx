@@ -8,26 +8,27 @@ interface PageProps {
   children: ReactNode;
   fullWidth?: boolean;
   maxWidth?: Breakpoint | false;
-  showNav?: boolean;
+  showSideNav?: boolean;
+  showTopNav?: boolean;
 }
 
 const Page = ({
   children,
   fullWidth = false,
   maxWidth = "xl",
-  showNav = false,
+  showSideNav = false,
+  showTopNav = false,
   ...props
 }: PageProps) => {
   return (
     <Container maxWidth={fullWidth ? false : maxWidth} {...props}>
-      {showNav && (
-        <>
-          <TopNav />
-          <SideNav />
-        </>
-      )}
+      {showTopNav && <TopNav />}
+      {showSideNav && <SideNav />}
+
       <Toolbar />
-      <FlexBox m={4}>{children}</FlexBox>
+      <FlexBox mt={2} flexGrow={1} sx={{ marginLeft: showSideNav ? "25%" : undefined }}>
+        {children}
+      </FlexBox>
     </Container>
   );
 };
