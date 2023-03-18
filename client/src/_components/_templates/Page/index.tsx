@@ -26,11 +26,7 @@ const Page = ({
       {showSideNav && <SideNav />}
 
       <Toolbar />
-      <FlexBox
-        mt={2}
-        flexGrow={1}
-        sx={{ marginLeft: showSideNav ? "25%" : undefined }}
-      >
+      <FlexBox mt={2} flexGrow={1} sx={{ marginLeft: showSideNav ? "25%" : undefined }}>
         {children}
       </FlexBox>
     </Container>

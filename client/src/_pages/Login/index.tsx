@@ -25,19 +25,10 @@ const Login = () => {
   return (
     <Page maxWidth="sm">
       <Card style={{ width: "100%" }}>
-        <CardHeader
-          title="Welcome to your task manager!"
-          subheader="Log in or sign up to start"
-        />
+        <CardHeader title="Welcome to your task manager!" subheader="Log in or sign up to start" />
         <CardContent>
           <FlexBox flexDirection="column">
-            <Box
-              display="flex"
-              flexDirection="column"
-              rowGap={2}
-              component="form"
-              noValidate
-            >
+            <Box display="flex" flexDirection="column" rowGap={2} component="form" noValidate>
               <TextField label="Username" id="username" required />
               <FormControl variant="outlined">
                 <InputLabel htmlFor="password">Password *</InputLabel>

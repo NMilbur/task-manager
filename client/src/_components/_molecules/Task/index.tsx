@@ -15,9 +15,7 @@ const Task = () => {
               </Typography>
             </FlexBox>
 
-            <Typography variant="caption">
-              Lorem ipsum dolor blah blah blah...
-            </Typography>
+            <Typography variant="caption">Lorem ipsum dolor blah blah blah...</Typography>
           </FlexBox>
         </ListItemButton>
       </ListItem>
